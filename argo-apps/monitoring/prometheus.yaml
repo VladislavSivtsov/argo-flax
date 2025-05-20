@@ -46,8 +46,8 @@ data:
     groups:
     - name: CPU usage of pods alert
       rules:
-      - alert: CPU usage of pods higher than 85%
-        expr: sum(irate(container_cpu_usage_seconds_total{container!=""}[1m])) by (namespace,pod) / sum(container_spec_cpu_quota{container!=""}/100000) by (namespace,pod) * 100 >= 85 
+      - alert: CPU usage of pods higher than 5%
+        expr: sum(irate(container_cpu_usage_seconds_total{container!=""}[1m])) by (namespace,pod) / sum(container_spec_cpu_quota{container!=""}/100000) by (namespace,pod) * 100 >= 5 
         for: 1m
         labels:
           severity: slack
