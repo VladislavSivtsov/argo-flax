@@ -69,7 +69,7 @@ data:
       receivers:
       - name: 'slack-notifications'
         slack_configs:
-        - api_url: 'https://hooks.slack.com/services/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'
+        - api_url: 'https://hooks.slack.com/services/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'
           channel: '#social'
           send_resolved: true
           title: '{{ template "slack.title" . }}'
